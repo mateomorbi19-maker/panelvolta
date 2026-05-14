@@ -1,4 +1,4 @@
-# Panel VoltaUY — demo
+# Panel VoltUY — demo
 
 Demo navegable del panel de control para Voltbike, usado como soporte visual en la llamada de ventas. HTML/CSS/JS planos, sin frameworks, sin build step. Todos los datos son mocks: nada se guarda en un backend.
 
@@ -43,8 +43,8 @@ Y abrir `http://localhost:8080`.
 ## Buildear y correr con Docker
 
 ```bash
-docker build -t panel-voltauy .
-docker run --rm -p 8080:80 panel-voltauy
+docker build -t panel-voltuy .
+docker run --rm -p 8080:80 panel-voltuy
 ```
 
 ## Deploy en Easypanel

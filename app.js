@@ -1,5 +1,5 @@
 /* ============================================================
-   Panel VoltaUY — demo state + interactions
+   Panel VoltUY — demo state + interactions
    ============================================================ */
 (function () {
   'use strict';
@@ -46,7 +46,7 @@
 
   /* ---------------- USERNAME ---------------- */
   try {
-    const u = localStorage.getItem('voltaUser');
+    const u = localStorage.getItem('voltUser');
     if (u) {
       const elName = document.getElementById('userName');
       const elGreet = document.getElementById('greetName');
@@ -196,7 +196,7 @@
   const logoutBtn = document.getElementById('logoutBtn');
   if (logoutBtn) {
     logoutBtn.addEventListener('click', () => {
-      try { localStorage.removeItem('voltaUser'); } catch (e) {}
+      try { localStorage.removeItem('voltUser'); } catch (e) {}
       window.location.href = 'index.html';
     });
   }
