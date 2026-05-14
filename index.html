@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Panel VoltaUY · Ingresar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-body">
+
+  <main class="login">
+    <div class="login__brand">
+      <div class="login__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+        </svg>
+      </div>
+      <p class="login__tag">Panel VoltaUY</p>
+    </div>
+
+    <h1 class="login__title">Elegí tu cuenta para continuar</h1>
+    <p class="login__sub">Acceso interno · Voltbike</p>
+
+    <button type="button" class="user-tile" id="loginPablo">
+      <div class="user-tile__avatar">P</div>
+      <div class="user-tile__info">
+        <p class="user-tile__name">Pablo</p>
+        <p class="user-tile__role">Administrador · Voltbike</p>
+      </div>
+      <span class="user-tile__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </span>
+    </button>
+
+    <p class="login__foot">Demo · Sistema de gestión</p>
+  </main>
+
+  <script>
+    document.getElementById('loginPablo').addEventListener('click', function () {
+      try { localStorage.setItem('voltaUser', 'Pablo'); } catch (e) {}
+      window.location.href = 'panel.html';
+    });
+  </script>
+
+</body>
+</html>

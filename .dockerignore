@@ -1,0 +1,10 @@
+.git
+.gitignore
+README.md
+.dockerignore
+Dockerfile
+node_modules
+.DS_Store
+*.log
+.vscode
+.idea
