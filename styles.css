@@ -117,21 +117,29 @@ svg { display: block; }
 }
 .login__sub { color: #8A92A6; font-size: 0.9rem; margin-bottom: var(--s-7); }
 .login__photo {
-  width: 104px;
-  height: 104px;
-  margin: 0 auto var(--s-6);
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  min-height: 72px;
+  max-width: 72px;
+  max-height: 72px;
+  margin: 0 auto var(--s-5);
   border-radius: 50%;
   overflow: hidden;
   background: #1A2030;
   box-shadow:
-    0 0 0 4px rgba(198, 255, 61, 0.18),
-    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-    0 18px 40px -16px rgba(0, 0, 0, 0.55);
-  display: block;
+    0 0 0 3px rgba(198, 255, 61, 0.16),
+    0 10px 24px -10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 .login__photo img {
-  width: 100%;
-  height: 100%;
+  width: 72px;
+  height: 72px;
+  max-width: 72px;
+  max-height: 72px;
   object-fit: cover;
   display: block;
 }
