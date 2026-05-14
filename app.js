@@ -192,49 +192,6 @@
     });
   }
 
-  /* ---------------- CHAT: TAKE CONTROL ---------------- */
-  const takeControlBtn = document.getElementById('takeControlBtn');
-  const chatBanner     = document.getElementById('chatBanner');
-  if (takeControlBtn && chatBanner) {
-    let paused = false;
-    takeControlBtn.addEventListener('click', () => {
-      paused = !paused;
-      chatBanner.classList.toggle('is-paused', paused);
-      if (paused) {
-        chatBanner.innerHTML = `
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <span>Tomaste el control. El agente quedó en pausa para esta conversación.</span>
-        `;
-        takeControlBtn.innerHTML = `
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          Reanudar agente
-        `;
-        showToast('Tomaste el control de la conversación');
-      } else {
-        chatBanner.innerHTML = `
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>El agente IA está respondiendo esta conversación automáticamente.</span>
-        `;
-        takeControlBtn.innerHTML = `
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-          Pausar agente
-        `;
-        showToast('Agente reanudado');
-      }
-    });
-  }
-
-  /* ---------------- CHAT LIST: select active ---------------- */
-  document.querySelectorAll('.chat[data-chat]').forEach((c) => {
-    c.addEventListener('click', () => {
-      document.querySelectorAll('.chat[data-chat]').forEach((x) => x.classList.remove('is-active'));
-      c.classList.add('is-active');
-      const name = c.querySelector('.chat__name')?.textContent || '';
-      const chatName = document.getElementById('chatName');
-      if (chatName && name) chatName.textContent = name;
-    });
-  });
-
   /* ---------------- LOGOUT ---------------- */
   const logoutBtn = document.getElementById('logoutBtn');
   if (logoutBtn) {
